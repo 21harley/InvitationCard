@@ -56,7 +56,7 @@ export default function InvitationCard() {
                           textDecoration: 'none',
                           marginLeft: '10px',
                           transition: 'background-color 0.3s',
-                          padding:'2px'
+                          padding:'2px 10px'
                         }}
                         onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#128C7E'}
                         onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#25D366'}
