@@ -11,7 +11,7 @@
 .invitation-card {
   width: 90%;
   max-width: 400px;
-  height: 600px;
+  height: 650px;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s;
@@ -178,7 +178,7 @@ h3 {
 /* Responsive */
 @media (max-width: 500px) {
   .invitation-card {
-    height: 500px;
+    height: 680px;
   }
   
   h1 {
