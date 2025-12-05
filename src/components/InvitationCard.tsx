@@ -21,7 +21,7 @@ export default function InvitationCard() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="invitation-container" style={{width: '100%'}}>
+    <div className="invitation-container" style={{width: '100%', height:'80%'}}>
       <div 
         className={`invitation-card ${isFlipped ? 'flipped' : ''}`}
         onClick={() => setIsFlipped(!isFlipped)}
