@@ -1,0 +1,200 @@
+/* src/components/InvitationCard.css */
+.invitation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.invitation-card {
+  width: 90%;
+  max-width: 400px;
+  height: 600px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.invitation-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card-front {
+  background: linear-gradient(45deg, #1a237e, #283593);
+  color: white;
+}
+
+.card-back {
+  background: white;
+  transform: rotateY(180deg);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card-content {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  color: #1a237e;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #1a237e;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #0d47a1;
+  margin: 10px 0 25px 0;
+  font-weight: 600;
+}
+
+.invitation-text {
+  width: 100%;
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.invitation-line {
+  margin: 4px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.empty-line {
+  height: 1em;
+  margin: 0;
+  content: " ";
+}
+
+/* Special styling for specific lines */
+.invitation-line:first-child {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+
+.invitation-line:nth-child(5) {
+  font-size: 1.3em;
+  color: #0d47a1;
+  font-weight: 600;
+  margin: 5px 0 15px 0;
+}
+
+.invitation-line:last-child {
+  margin-top: 20px;
+  font-style: italic;
+  color: #1a237e;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+.icon {
+  font-size: 1.5em;
+  margin-right: 15px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.rsvp {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #1a237e;
+  background: #e8eaf6;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+/* Efecto de elevación al pasar el ratón */
+.invitation-card:not(.flipped):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .invitation-card {
+    height: 500px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  .detail-item {
+    font-size: 1em;
+  }
+  
+  .card-front,
+  .card-back {
+    padding: 15px;
+  }
+}
